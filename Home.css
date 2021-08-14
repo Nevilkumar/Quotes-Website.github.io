@@ -2,49 +2,108 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 body{
+
     width: 100vw;
     height: 100vh;
     display: flex;
+    font-size:30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(124, 124, 250); 
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
+    /* background: #1c92d2;
+    background: -webkit-linear-gradient(to top, #f2fcfe, #1c92d2);  
+    background: linear-gradient(to top, #f2fcfe, #1c92d2);  */
+
+
+    background: linear-gradient(225deg, #6be19f, #40bcff, #f685c6);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 17s ease infinite;
+    -moz-animation: AnimationName 17s ease infinite;
+    animation: AnimationName 17s ease infinite;
 }
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+
 .quotes{
-    width: 60%;
+    width: 920px;
+    max-width: 920px;
     height: 68%;
-    background-color: white;
-    border: 2px solid black;
+    color: white;
+    background-image: url('./Image.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
     text-align: center;
-    border-top-left-radius: 10px ;
-    border-top-right-radius: 10px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
     font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
 }
 #btn{
-    width: 60%;
-    height: 35px;
+    width: 920px;
+    max-width: 920px;
+    height: 50px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    background-color: rgb(250, 57, 115);
-    border: 2px solid black;
-    border-top: 0px;
+    font-size: 28px;
     cursor: pointer;
-    border-bottom-left-radius: 10px ;
-    border-bottom-right-radius: 10px ;
+    margin-top: 10px;
+    border-radius: 6px;
+    outline: none;
 }
-#btn:hover{
-    background-color: rgb(250, 98, 181);
+
+.btn-hover {
+    color: #fff;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-4{
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+#para1{
+    padding:0px 20px;
 }
 #para2{
     width: 100%;
@@ -52,10 +111,17 @@ body{
     padding-right: 30px;
 }
 
+
+
+
 @media only screen and (max-width: 600px){
+    body{
+        font-size: 20px;
+    }
     #btn{
         width: 85%;
-        height: 38px;
+        height: 40px;
+        font-size: 20px;
     }
     .quotes{
         width:85%;
